@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Engineering Coursework</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!--
+    SETTING UP THE SIDEBAR
+-->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="../../../../../../index.html" class="w3-round-large w3-button w3-black">Home</a>
+    <h3 class="w3-padding-10"><b></b></h3>
+    <a href="../../../Coding_project_list.html" class="w3-round-large w3-button w3-black">Back To Project List</a>
+    <h3 class="w3-padding-64"><b>Project Structure</b></h3>
+  </div>
+  <div class="w3-bar-block">
+     <a href="#Project Aim" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Project Aim</a>
+    <a href="#Project Summary" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Project Summary</a>
+    <a href="#summary" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Summary</a>
+  </div>
+</nav>
+
+
+
+<!--
+    DEFINING THE PROJECT TITL
+-->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Engineering Coursework Challenge</b></h1>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="Project Aim" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project Aim:</b></h1>
+    <p>
+        During my second year of university as one of my extra modules, I was assigned an coursework using matlab which was to complete some programming tasks assigned by my lecturer. During this time I was introducing myself to the world of python and I thought this would be an appropriate task to achieve in python. This project summary shows how I approached these programming tasks and the outputs as well as any difficulties I had come across and my solution to these problems.
+    </p>
+  </div>
+
+  <!-- Designers -->
+  <div class="w3-container" id="Project Summary" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project Summary:</b></h1>
+    <p>
+        For this coursework I was assigned 3 concepts that I was ment to achieve/understand by the end of the task:
+    <ol>
+        <li> Function implementation</li>
+        <li> Logic and decision making</li>
+        <li> Graphics and plotting</li>
+    </ol>
+
+    The first task that I was assigned was create a function to first create a time vector and then plot some signals. The equations are show below:
+
+    <p>
+    </p>
+
+    <center>
+        <div class="cmath">
+            `y_1(t) = Asin( (2pi)/t_1 - Psi_1)`
+        </div>
+        <p>
+        </p>
+
+
+        <div class="cmath">
+            `y_2(t) = Bcos( (2pi)/t_2 - Psi_2)`
+        </div>
+        <p>
+        </p>
+
+        <div class="cmath">
+            `y(t) = y_1(t) + 2y_1(t)`
+        </div>
+    </center>
+
+
+
+    where:
+    <p>
+    </p>
+    <div class="cmath">
+        `theta = 12345678`
+    </div>
+    <p>
+    </p>
+    <div class="cmath">
+        `A = Sum(theta)`
+    </div>
+    <p>
+    </p>
+    <div class="cmath">
+        `B = A/20`
+    </div>
+    <p>
+    </p>
+    <div class="cmath">
+        `T_1 = (Mean(theta))/10`
+    </div>
+    <p>
+    </p>
+    <div class="cmath">
+        `T_2 = t_1/10`
+    </div>
+    <p>
+    </p>
+    <div class="cmath">
+        `phi = Sum(theta)`
+    </div>
+    <p>
+    </p>
+    <div class="cmath">
+        `phi = pi/4`
+    </div>
+
+    <p>
+    </p>
+
+    With all the relevant equations and variables defined it was a simple task of producing a function that will take in the 8 digit number and outputs the plots of the three signals Y1(t), Y2(t) and Y(t). The function has been defined below:
+
+    <p>
+    </p>
+
+    <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">function</span><span style="color: #f8f8f2">(SID,ts):</span>
+    <span style="color: #f8f8f2">A</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">sum(SID)</span>
+    <span style="color: #f8f8f2">B</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">A</span><span style="color: #f92672">/</span><span style="color: #ae81ff">20</span>
+    <span style="color: #f8f8f2">T1</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">mean(SID)</span><span style="color: #f92672">/</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">T2</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">T1</span><span style="color: #f92672">/</span><span style="color: #ae81ff">10</span>
+    <span style="color: #f8f8f2">Phi_1</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">radians(sum(SID))</span>
+    <span style="color: #f8f8f2">Phi_2</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">radians((np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">pi)</span><span style="color: #f92672">/</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">)</span>
+    <span style="color: #f8f8f2">time_step</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">T2</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">ts</span>
+    <span style="color: #f8f8f2">times</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">arange(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">3</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">T1,time_step)</span>
+
+    <span style="color: #f8f8f2">y1</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[]</span>
+    <span style="color: #f8f8f2">y2</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[]</span>
+    <span style="color: #f8f8f2">y3</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[]</span>
+    <span style="color: #f8f8f2">new</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[]</span>
+
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i,</span> <span style="color: #f8f8f2">time</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">enumerate(times):</span>
+        <span style="color: #f8f8f2">y1</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(</span> <span style="color: #f8f8f2">A</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sin((((</span><span style="color: #ae81ff">2</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">pi)</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">T1)</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">time)</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">Phi_1)</span> <span style="color: #f8f8f2">)</span>
+        <span style="color: #f8f8f2">y2</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(</span> <span style="color: #f8f8f2">B</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cos((((</span><span style="color: #ae81ff">2</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">pi)</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">T2)</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">time)</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">Phi_2)</span> <span style="color: #f8f8f2">)</span>
+
+    <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">(a,b)</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">zip(y1,y2):</span>
+        <span style="color: #f8f8f2">y3</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(</span> <span style="color: #f8f8f2">a</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">2</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">b</span> <span style="color: #f8f8f2">)</span>
+
+
+    </pre></div>
+
+
+
+    <p>
+    </p>
+     As a contunutation from task one, the second task was focusing on Logic and decision making. This task consisted of taking the calculated vector y(t) and loop though the values and store a new vector called c(t).
+
+    <p>
+    </p>
+
+    <center>
+        <img src="Images\Logic.PNG" style="width:50%" onclick="onClick(this)" alt="Concrete meets bricks">
+    </center>
+
+    <p>
+    </p>
+
+    Using the logic from the table show above, thhe previous function was updated to incoporate the logic and this is shown below.
+
+    <p>
+    </p>
+
+    <!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">def</span> <span style="color: #a6e22e">function</span><span style="color: #f8f8f2">(SID,ts):</span>
+        <span style="color: #f8f8f2">A</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">sum(SID)</span>
+        <span style="color: #f8f8f2">B</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">A</span><span style="color: #f92672">/</span><span style="color: #ae81ff">20</span>
+        <span style="color: #f8f8f2">T1</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">(np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">mean(SID)</span><span style="color: #f92672">/</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)</span>
+        <span style="color: #f8f8f2">T2</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">T1</span><span style="color: #f92672">/</span><span style="color: #ae81ff">10</span>
+        <span style="color: #f8f8f2">Phi_1</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">radians(sum(SID))</span>
+        <span style="color: #f8f8f2">Phi_2</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">radians((np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">pi)</span><span style="color: #f92672">/</span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2">)</span>
+        <span style="color: #f8f8f2">time_step</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">T2</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">ts</span>
+        <span style="color: #f8f8f2">times</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">arange(</span><span style="color: #ae81ff">0</span><span style="color: #f8f8f2">,</span><span style="color: #ae81ff">3</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">T1,time_step)</span>
+
+        <span style="color: #f8f8f2">y1</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[]</span>
+        <span style="color: #f8f8f2">y2</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[]</span>
+        <span style="color: #f8f8f2">y3</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[]</span>
+        <span style="color: #f8f8f2">new</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">[]</span>
+
+        <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">i,</span> <span style="color: #f8f8f2">time</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">enumerate(times):</span>
+            <span style="color: #f8f8f2">y1</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(</span> <span style="color: #f8f8f2">A</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">sin((((</span><span style="color: #ae81ff">2</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">pi)</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">T1)</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">time)</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">Phi_1)</span> <span style="color: #f8f8f2">)</span>
+            <span style="color: #f8f8f2">y2</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(</span> <span style="color: #f8f8f2">B</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">cos((((</span><span style="color: #ae81ff">2</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">pi)</span><span style="color: #f92672">/</span><span style="color: #f8f8f2">T2)</span><span style="color: #f92672">*</span><span style="color: #f8f8f2">time)</span><span style="color: #f92672">-</span><span style="color: #f8f8f2">Phi_2)</span> <span style="color: #f8f8f2">)</span>
+
+        <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">(a,b)</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">zip(y1,y2):</span>
+            <span style="color: #f8f8f2">y3</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(</span> <span style="color: #f8f8f2">a</span> <span style="color: #f92672">+</span> <span style="color: #ae81ff">2</span> <span style="color: #f92672">*</span> <span style="color: #f8f8f2">b</span> <span style="color: #f8f8f2">)</span>
+
+        <span style="color: #66d9ef">for</span> <span style="color: #f8f8f2">values</span> <span style="color: #f92672">in</span> <span style="color: #f8f8f2">y3:</span>
+
+            <span style="color: #66d9ef">if</span> <span style="color: #f8f8f2">values</span> <span style="color: #f92672">&gt;=</span> <span style="color: #f8f8f2">max(y3)</span><span style="color: #f92672">/</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">:</span>
+                <span style="color: #f8f8f2">values</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">max(y3)</span>
+                <span style="color: #f8f8f2">new</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(values)</span>
+
+            <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">absolute(values)</span> <span style="color: #f92672">&lt;</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">max(y3)</span><span style="color: #f92672">/</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">:</span>
+                <span style="color: #f8f8f2">values</span> <span style="color: #f92672">=</span> <span style="color: #ae81ff">0</span>
+                <span style="color: #f8f8f2">new</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(values)</span>
+
+            <span style="color: #66d9ef">elif</span> <span style="color: #f8f8f2">values</span> <span style="color: #f92672">&lt;=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">min(y3)</span><span style="color: #f92672">/</span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">:</span>
+                <span style="color: #f8f8f2">values</span> <span style="color: #f92672">=</span> <span style="color: #f8f8f2">np</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">min(y3)</span>
+                <span style="color: #f8f8f2">new</span><span style="color: #f92672">.</span><span style="color: #f8f8f2">append(values)</span>
+    </pre></div>
+
+    <p>
+    </p>
+
+    Using the updated function the signal y(t) and c(t) are shown below.
+
+    <p>
+    </p>
+
+    <center>
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <img src="Images\Figure_1.png" style="width:90%" class="center" onclick="onClick(this)" alt="Concrete meets bricks">
+            <img src="Images\Figure_2.png" style="width:90%" class="center" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+          </div>
+        </div>
+
+    </center>
+    </p>
+
+<div class="w3-container" id="summary" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-red"><b>Summary:</b></h1>
+  <p>
+      Since this was my first program in Python, nearly everything was a challenge. However, understanding different data types and the use of loops was particularly challenging. However the most important thing that I had taken away from this project was planing out what my program was going to do beforehand as this really gave me a basis and a sort of check list that I was able to tick off throught the project.
+  </p>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32"
+     style="margin-top:75px;padding-right:58px">
+     <p class="w3-right">Created By: Yohann Panthakee </p>
+</div>
+
+
+<script type="text/javascript"
+        async=""
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script>
+// Script to open and close sidebar
+
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
